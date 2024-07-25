@@ -25,3 +25,13 @@ This project focuses on predicting rent prices across Canada by leveraging regre
 
 ## Dataset
 You can download the dataset from the following link: [rentfaster.csv](https://www.kaggle.com/datasets/sergiygavrylov/25000-canadian-rental-housing-market-june-2024)
+
+## Approach
+1. **Initial Polynomial Regression:** The first step involved applying polynomial regression to capture non-linear relationships between the features and rent prices.
+2. **Adding Interaction Terms with LassoCV:**  Interaction terms were introduced to explore how combinations of features might affect rent prices. LassoCV was used during this phase to perform feature selection and regularization. While this approach aimed to enhance model accuracy, it led to an increase in RMSE (Root Mean Square Error) and high Variance Inflation Factor (VIF) values, signaling multicollinearity.
+3. **Feature Selection and Multicollinearity:** To address the high VIF values, features with excessive multicollinearity were removed.
+4. **RidgeCV Regression:**  To further refine the model and handle multicollinearity, RidgeCV regression was employed. This method applies regularization to stabilize coefficients and enhance model performance.
+
+## Conclusion
+This project demonstrates the use of various regression techniques and feature engineering strategies to predict rent prices. RidgeCV was effective in managing multicollinearity and improving the overall model performance.
+
