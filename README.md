@@ -28,9 +28,8 @@ You can download the dataset from the following link: [rentfaster.csv](https://w
 
 ## Approach
 1. **Initial Polynomial Regression:** The first step involved applying polynomial regression to capture non-linear relationships between the features and rent prices.
-2. **Adding Interaction Terms with LassoCV:**  Interaction terms were introduced to explore how combinations of features might affect rent prices. LassoCV was used during this phase to perform feature selection and regularization. While this approach aimed to enhance model accuracy, it led to an increase in RMSE (Root Mean Square Error) and high Variance Inflation Factor (VIF) values, signaling multicollinearity.
-3. **Feature Selection and Multicollinearity:** To address the high VIF values, features with excessive multicollinearity were removed.
-4. **RidgeCV Regression:**  To further refine the model and handle multicollinearity, RidgeCV regression was employed. This method applies regularization to stabilize coefficients and enhance model performance.
+2. **Adding Interaction Terms with LassoCV:** Used LassoCV for feature selection and regularization. After adding the 'type' column, it significantly reduced RMSE, and MAE in LassoCV model.
+3. **RidgeCV Regression:**  To further refine the model and handle multicollinearity, RidgeCV regression was employed. This method applies regularization to stabilize coefficients and enhance model performance.
 
 ## Conclusion
 This project demonstrates the use of various regression techniques and feature engineering strategies to predict rent prices. RidgeCV was effective in managing multicollinearity and improving the overall model performance.
